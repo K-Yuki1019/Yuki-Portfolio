@@ -1,0 +1,35 @@
+.home {
+  &__images {
+    position: relative;
+    background: url(../../../assets/images/町田2.jpeg) no-repeat center;
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+    &::before {
+      content: "";
+      position: absolute;
+      background-color: rgba(0, 0, 0, 0.6);
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+    }
+  }
+  &__main {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 1.6;
+  }
+  &__title {
+    font-size: 56px;
+    margin-bottom: 16px;
+    color: white;
+  }
+  &__text {
+    color: white;
+    font-size: 16px;
+  }
+}
