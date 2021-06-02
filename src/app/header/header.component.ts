@@ -8,8 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
   activatedTab = 'home';
   headerTabs = [
-    { path: 'home', label: 'ホーム' },
-    { path: 'about-me', label: '私について' },
+    { path: '', label: 'ホーム' },
+    { path: 'profile', label: '私について' },
     { path: 'products', label: '関わった制作物' },
     { path: 'contact', label: '連絡先' },
   ];
