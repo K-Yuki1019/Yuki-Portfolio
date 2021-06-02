@@ -1,0 +1,22 @@
+.about {
+  padding-top: 48px;
+  display: flex;
+  width: 800px;
+  margin: auto;
+  &__avatar {
+    height: 240px;
+    width: 240px;
+    border-radius: 50%;
+    background: url(../../../assets/images/test.jpeg) no-repeat center center;
+    background-size: cover;
+    border: 4px solid #ddd;
+    margin-right: 24px;
+  }
+  &__text {
+    flex: 1;
+    padding: 16px 0;
+  }
+  &__name {
+    margin-bottom: 16px;
+  }
+}
