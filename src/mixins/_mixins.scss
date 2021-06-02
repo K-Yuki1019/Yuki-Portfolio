@@ -1,0 +1,16 @@
+$color-main: #f1eff0;
+$color-sub: #fff;
+
+$sp: 480px;
+$tab: 760px;
+
+@mixin sp {
+  @media screen and (max-width: $sp) {
+    @content;
+  }
+}
+@mixin tab {
+  @media screen and (max-width: $tab) {
+    @content;
+  }
+}
