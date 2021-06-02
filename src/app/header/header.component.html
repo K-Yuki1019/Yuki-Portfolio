@@ -1,0 +1,14 @@
+<div class="header">
+  <p class="header__logo">LOGO</p>
+  <div class="nav">
+    <ng-container *ngFor="let headerTabs of headerTabs">
+      <a
+        class="nav__item"
+        [routerLink]="headerTabs.path"
+        routerLinkActive="active"
+        (click)="activatedTab = headerTabs.path"
+        >{{ headerTabs.label }}</a
+      >
+    </ng-container>
+  </div>
+</div>
