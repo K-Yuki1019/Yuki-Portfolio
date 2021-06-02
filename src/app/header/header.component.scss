@@ -1,0 +1,29 @@
+.header {
+  display: flex;
+  box-sizing: border-box;
+  justify-content: space-between;
+  padding: 16px 40px;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  background-color: #f1eff0;
+  align-items: center;
+}
+
+.nav {
+  &__item {
+    padding: 9px;
+    font-size: 14px;
+    position: relative;
+    &::after {
+      position: absolute;
+      content: "";
+      right: 0px;
+      top: 10px;
+      display: block;
+      width: 1px;
+      height: 12px;
+      background: #d9dee6;
+    }
+  }
+}
