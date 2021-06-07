@@ -2,10 +2,22 @@
   <div class="contact">
     <h1 class="contact__title">Contact</h1>
     <div class="form">
-      <form [formGroup]="form">
+      <form
+        action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfZ7EhYnOgBfUWqQ15gFuHL2R2Zoml44Mqd2lIRH4Q69gyT4A/formResponse"
+        [formGroup]="form"
+        target="_self"
+        method="POST"
+        id="mG61Hd"
+      >
         <mat-form-field appearance="outline" class="form__item">
           <mat-label>お名前</mat-label>
-          <input type="text" matInput required formControlName="name" />
+          <input
+            type="text"
+            name="entry.95132189"
+            matInput
+            required
+            formControlName="name"
+          />
           <mat-error *ngIf="name.hasError('required')"
             >こちらは必須入力です</mat-error
           >
@@ -13,15 +25,26 @@
 
         <mat-form-field appearance="outline" class="form__item">
           <mat-label>メールアドレス</mat-label>
-          <input type="email" matInput required formControlName="email" />
+          <input
+            type="email"
+            name="entry.1962387549"
+            matInput
+            required
+            formControlName="email"
+          />
+          <mat-error *ngIf="email.hasError('required')"
+            >こちらは必須入力です</mat-error
+          >
         </mat-form-field>
 
         <mat-form-field appearance="outline" class="form__item">
           <mat-label>お問い合わせ内容</mat-label>
           <textarea
+            type="text"
             matInput
             autocomplete="off"
             required
+            name="entry.1684117469"
             formControlName="text"
             [matTextareaAutosize]="true"
             [matAutosizeMinRows]="3"
@@ -30,7 +53,14 @@
             >こちらは必須入力です</mat-error
           >
         </mat-form-field>
-        <button class="form__submit" mat-raised-button>送信する</button>
+        <button
+          (click)="submit()"
+          type="submit"
+          class="form__submit"
+          mat-raised-button
+        >
+          送信する
+        </button>
       </form>
     </div>
   </div>

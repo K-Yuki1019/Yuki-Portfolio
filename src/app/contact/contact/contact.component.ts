@@ -8,9 +8,9 @@ import { FormBuilder, FormControl, Validators } from '@angular/forms';
 })
 export class ContactComponent implements OnInit {
   form = this.fb.group({
-    name: ['', [Validators.required]],
-    email: [''],
-    text: ['', [Validators.required]],
+    name: ['', []],
+    email: ['', []],
+    text: ['', []],
   });
 
   constructor(private fb: FormBuilder) {}
@@ -28,4 +28,8 @@ export class ContactComponent implements OnInit {
   }
 
   ngOnInit(): void {}
+
+  submit() {
+    console.log(this.form.value);
+  }
 }
