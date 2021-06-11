@@ -10,7 +10,7 @@ export class HeaderComponent implements OnInit {
   headerTabs = [
     { path: '', label: 'ホーム' },
     { path: 'profile', label: '私について' },
-    { path: 'products', label: '関わった制作物' },
+    { path: 'works', label: '関わった制作物' },
     { path: 'contact', label: '連絡先' },
   ];
 
