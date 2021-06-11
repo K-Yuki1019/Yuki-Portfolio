@@ -1,23 +1,47 @@
+.title {
+  margin-top: 70px;
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 24px;
+}
+
 .about {
-  padding-top: 80px;
   display: flex;
-  width: 800px;
   margin: auto;
   align-items: center;
+  padding: 0 28px;
   &__avatar {
-    height: 240px;
-    width: 240px;
+    height: 200px;
+    width: 200px;
     border-radius: 50%;
     background: url(../../../assets/images/test.jpeg) no-repeat center center;
     background-size: cover;
     border: 4px solid #ddd;
     margin-right: 24px;
   }
+  &__description {
+    word-break: break-all;
+  }
   &__text {
     flex: 1;
     padding: 16px 0;
   }
-  &__name {
+  &__info {
+    display: flex;
+    align-items: center;
     margin-bottom: 16px;
+    justify-content: space-between;
+  }
+  &__logo {
+    display: flex;
+    align-items: center;
+    text-align: right;
+  }
+}
+
+.logo {
+  width: 40px;
+  &:nth-child(1) {
+    margin-right: 16px;
   }
 }
