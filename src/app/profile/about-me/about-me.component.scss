@@ -1,7 +1,7 @@
 .title {
   margin-top: 70px;
   text-align: center;
-  font-size: 40px;
+  font-size: 48px;
   margin-bottom: 24px;
 }
 
@@ -18,6 +18,9 @@
     background-size: cover;
     border: 4px solid #ddd;
     margin-right: 24px;
+  }
+  &__name {
+    font-size: 24px;
   }
   &__description {
     word-break: break-all;
