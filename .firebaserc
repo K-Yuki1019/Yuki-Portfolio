@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "kumamoto-portfolio": {
+      "hosting": {
+        "yuki-portfolio": [
+          "kumamoto-portfolio"
+        ]
+      }
+    }
+  }
+}
