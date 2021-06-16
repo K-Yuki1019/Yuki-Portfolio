@@ -1,11 +1,20 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
-  constructor(private afAuth: AngularFireAuth) {}
+  isProcessing: boolean = false;
+  afUser$ = this.afAuth.authState;
+
+  constructor(
+    private afAuth: AngularFireAuth,
+    private router: Router,
+    private snackBar: MatSnackBar
+  ) {}
 
   // createUser(params: { email: string; password: string }) {
   //   this.afAuth
@@ -44,21 +53,30 @@ export class AuthService {
   // }
 
   login(data: { email: string; password: string }) {
+    this.isProcessing = true;
     console.log(data.email, data.password);
     this.afAuth
       .signInWithEmailAndPassword(data.email, data.password)
+      .then(() => this.succeededLogin())
       .catch((error) => {
         switch (error.code) {
-          case 'auth/user-not-found':
-            alert('この先は管理者のみ閲覧可能です');
+          case 'auth/invalid-email':
+            this.snackBar.open('メールアドレスが不正です', '閉じる');
             break;
           case 'auth/wrong-password':
-            alert('パスワードが間違っています');
+            this.snackBar.open('パスワードが間違っています', '閉じる');
             break;
-          case 'auth/invalid-email':
-            alert('メールアドレスが不正です');
+          case 'auth/user-not-found':
+            this.snackBar.open('この先は管理者のみ閲覧可能です', '閉じる');
             break;
         }
+        this.isProcessing = false;
       });
+  }
+
+  private succeededLogin() {
+    this.router.navigateByUrl('/admin');
+    this.snackBar.open('管理画面にログインしました!', '閉じる');
+    this.isProcessing = false;
   }
 }
