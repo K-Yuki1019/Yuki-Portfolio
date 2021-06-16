@@ -1,9 +1,10 @@
-<div class="container">
-  <ng-component *ngIf="afUser$ | async as user">
-    <div class="create">{{ user.displayName }}さんこんにちは！</div>
-    <p>{{ user.email }}で登録しています</p>
-    <p>{{ user.emailVerified }}</p>
-  </ng-component>
+<div class="container" *ngIf="afUser$ | async as user">
+  <p class="create">{{ user.uid }}さんこんにちは！</p>
+  <p>{{ user.email }}で登録しています</p>
+  <p>
+    {{ user.emailVerified }} {{ user.providerId }} {{ user.providerData }}
+    {{ user.uid }}
+  </p>
   <button>テスト</button>
   <app-create></app-create>
 </div>
