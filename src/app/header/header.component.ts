@@ -12,6 +12,7 @@ export class HeaderComponent implements OnInit {
     { path: 'profile', label: '私について' },
     { path: 'works', label: '関わった制作物' },
     { path: 'contact', label: '連絡先' },
+    { path: 'login', label: '管理者ページ' },
   ];
 
   constructor() {}

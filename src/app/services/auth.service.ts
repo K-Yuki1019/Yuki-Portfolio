@@ -44,6 +44,7 @@ export class AuthService {
   // }
 
   login(data: { email: string; password: string }) {
+    console.log(data.email, data.password);
     this.afAuth
       .signInWithEmailAndPassword(data.email, data.password)
       .catch((error) => {

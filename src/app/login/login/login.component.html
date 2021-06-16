@@ -1,0 +1,65 @@
+<div class="container container--login">
+  <div class="login">
+    <div class="header">
+      <div class="header__items">
+        <img src="/assets/images/favicon.svg" alt="" class="header__logo" />
+        <span class="header__title">管理者ログイン</span>
+      </div>
+    </div>
+    <div class="login__body">
+      <form [formGroup]="form" class="login__form">
+        <div class="login__address">
+          <button mat-icon-button type="button" class="login__icon">
+            <mat-icon>perm_identity</mat-icon>
+          </button>
+          <mat-form-field appearance="standard">
+            <mat-label>メールアドレス</mat-label>
+            <input
+              type="email"
+              matInput
+              required
+              formControlName="email"
+              autocomplete="email"
+            />
+            <mat-error *ngIf=""></mat-error>
+          </mat-form-field>
+        </div>
+        <div class="login__password">
+          <button mat-icon-button type="button" class="login__icon">
+            <mat-icon>lock</mat-icon>
+          </button>
+          <mat-form-field appearance="standard">
+            <mat-label>パスワード</mat-label>
+            <input
+              type="password"
+              matInput
+              required
+              formControlName="password"
+              autocomplete="current-password"
+              [type]="hide ? 'password' : 'text'"
+            />
+            <button
+              mat-icon-button
+              matSuffix
+              (click)="hide = !hide"
+              [attr.aria-label]="'Hide password'"
+              [attr.aria-pressed]="hide"
+            >
+              <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+            </button>
+          </mat-form-field>
+        </div>
+        <div class="login__action-btn">
+          <button mat-stroked-button (click)="login()" class="submit">
+            管理者ログイン
+          </button>
+          <a href=""
+            ><button mat-stroked-button type="button" class="back">
+              topへ戻る
+            </button></a
+          >
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
