@@ -1,0 +1,9 @@
+<div class="container">
+  <ng-component *ngIf="afUser$ | async as user">
+    <div class="create">{{ user.displayName }}さんこんにちは！</div>
+    <p>{{ user.email }}で登録しています</p>
+    <p>{{ user.emailVerified }}</p>
+  </ng-component>
+  <button>テスト</button>
+  <app-create></app-create>
+</div>
