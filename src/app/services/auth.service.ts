@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class AuthService {
   isProcessing: boolean = false;
-  afUser$ = this.afAuth.authState;
+  afUser$ = this.afAuth.user;
 
   constructor(
     private afAuth: AngularFireAuth,
@@ -57,6 +57,7 @@ export class AuthService {
     console.log(data.email, data.password);
     this.afAuth
       .signInWithEmailAndPassword(data.email, data.password)
+      .then((auth) => auth.user?.sendEmailVerification())
       .then(() => this.succeededLogin())
       .catch((error) => {
         switch (error.code) {
@@ -72,6 +73,12 @@ export class AuthService {
         }
         this.isProcessing = false;
       });
+  }
+
+  logout() {
+    this.afAuth.signOut();
+    this.snackBar.open('ログアウトしました', '閉じる');
+    this.router.navigateByUrl('');
   }
 
   private succeededLogin() {
