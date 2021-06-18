@@ -57,7 +57,6 @@ export class AuthService {
     console.log(data.email, data.password);
     this.afAuth
       .signInWithEmailAndPassword(data.email, data.password)
-      .then((auth) => auth.user?.sendEmailVerification())
       .then(() => this.succeededLogin())
       .catch((error) => {
         switch (error.code) {

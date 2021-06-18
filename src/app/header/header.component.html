@@ -12,8 +12,9 @@
         >{{ headerTabs.label }}</a
       >
     </ng-container>
-    <ng-container *ngIf="afUser$ | async as user">
+    <ng-container *ngIf="afUser$ | async as user; notLogin">
       <button (click)="logout()">ログアウト</button>
     </ng-container>
+    <ng-template #notLogin> </ng-template>
   </div>
 </div>

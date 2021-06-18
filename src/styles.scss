@@ -14,6 +14,12 @@ body {
     margin: 0 auto;
     box-sizing: border-box;
   }
+  &--create {
+    max-width: 600px;
+    padding: 24px 24px 80px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
 }
 
 h1,
