@@ -3,11 +3,9 @@ import 'firebase/firestore';
 
 export interface Article {
   title: string;
-  description: string;
-  serviceId: string;
-  createdAt: firebase.firestore.Timestamp;
-  sumbnailURL: string;
-  serviceURL: string;
   articleId: string;
-  userId: string;
+  createdAt: firebase.firestore.Timestamp;
+  description: string;
+  serviceURL: string;
+  githubURL: string;
 }
