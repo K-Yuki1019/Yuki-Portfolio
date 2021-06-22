@@ -1,11 +1,11 @@
 <div class="container container--create">
   <div class="create">
-    <form action="" class="create__form">
+    <form [formGroup]="form" class="create__form">
       <div class="create__item">
         <h2 class="create__title">サービス名</h2>
         <mat-form-field appearance="outline">
           <mat-label>サービス名</mat-label>
-          <input type="text" matInput />
+          <input formControlName="title" type="text" matInput />
           <mat-error></mat-error>
         </mat-form-field>
       </div>
@@ -13,7 +13,7 @@
         <h2 class="create__title">サービス説明</h2>
         <mat-form-field appearance="outline">
           <mat-label>サービス説明</mat-label>
-          <textarea matInput></textarea>
+          <textarea formControlName="description" matInput></textarea>
           <mat-error></mat-error>
         </mat-form-field>
       </div>
@@ -22,14 +22,21 @@
         <input type="file" />
       </div>
       <div class="create__item">
-        <h2 class="create__title">サービスURL</h2>
+        <h2 class="create__title">URL</h2>
         <mat-form-field appearance="outline">
-          <mat-label>URL</mat-label>
-          <input matInput />
+          <mat-label>サービスURL</mat-label>
+          <input formControlName="serviceURL" matInput />
+          <mat-error></mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>githubURL</mat-label>
+          <input formControlName="githubURL" matInput />
           <mat-error></mat-error>
         </mat-form-field>
       </div>
-      <button mat-stroked-button class="create__submit">作成</button>
+      <button mat-stroked-button (click)="submit()" class="create__submit">
+        作成
+      </button>
     </form>
   </div>
 </div>

@@ -114,9 +114,21 @@
         "deploy": {
           "builder": "@angular/fire:deploy",
           "options": {}
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
+          }
         }
       }
     }
   },
-  "defaultProject": "yuki-portfolio"
+  "defaultProject": "yuki-portfolio",
+  "cli": {
+    "defaultCollection": "@angular-eslint/schematics"
+  }
 }
