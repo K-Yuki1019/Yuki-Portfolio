@@ -11,11 +11,12 @@ export class ArticleService {
     article: Omit<Article, 'articleId' | 'createdAt'>
   ): Promise<void> {
     const id = this.db.createId();
-    return this.db.doc(`article/${id}`).set({
-      id,
+    const articleValue: Article = {
+      articleId: id,
       createdAt: firebase.firestore.Timestamp.now(),
       ...article,
-    });
+    };
+    return this.db.doc(`articles/${id}`).set(articleValue);
   }
 
   constructor(private db: AngularFirestore) {}
