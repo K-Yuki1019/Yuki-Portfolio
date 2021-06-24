@@ -7,6 +7,10 @@ import firebase from 'firebase/app';
   providedIn: 'root',
 })
 export class ArticleService {
+  // getArticle(articleId: string) {
+  //   return this.db.doc(`articles/${articleId}`);
+  // }
+
   createArticle(
     article: Omit<Article, 'articleId' | 'createdAt'>
   ): Promise<void> {
