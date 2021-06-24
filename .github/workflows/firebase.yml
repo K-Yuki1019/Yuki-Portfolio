@@ -15,8 +15,14 @@ jobs:
         run: npm install
       - name: Build
         run: npm run build
-      - name: Deploy to Firebase
-        run: |
-          node_modules/firebase-tools/lib/bin/firebase.js deploy --token $FIREBASE_TOKEN
+      - name: Deploy for Function
+        uses: w9jds/firebase-action@master
+        with:
+          args: deploy --token $FIREBASE_TOKEN
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+      # - name: Deploy to Firebase
+      #   run: |
+      #     node_modules/firebase-tools/lib/bin/firebase.js deploy --token $FIREBASE_TOKEN
+      #   env:
+      #     FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
