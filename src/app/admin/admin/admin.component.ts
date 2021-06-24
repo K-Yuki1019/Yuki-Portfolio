@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Observable } from 'rxjs';
+import { Article } from 'src/app/interfaces/article';
+import { ArticleService } from 'src/app/services/article.service';
 import { AuthService } from 'src/app/services/auth.service';
+import { switchMap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-admin',
@@ -9,7 +14,10 @@ import { AuthService } from 'src/app/services/auth.service';
 export class AdminComponent implements OnInit {
   afUser$ = this.authService.afUser$;
 
-  constructor(private authService: AuthService) {}
+  constructor(
+    private authService: AuthService,
+    private articleService: ArticleService
+  ) {}
 
   ngOnInit(): void {}
 }
