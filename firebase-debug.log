@@ -1,0 +1,103 @@
+[debug] [2021-06-24T13:23:17.824Z] ----------------------------------------------------------------------
+[debug] [2021-06-24T13:23:17.825Z] Command:       /Users/yuki/.anyenv/envs/nodenv/versions/14.17.0/bin/node /Users/yuki/.anyenv/envs/nodenv/versions/14.17.0/bin/firebase deploy
+[debug] [2021-06-24T13:23:17.825Z] CLI Version:   9.14.0
+[debug] [2021-06-24T13:23:17.825Z] Platform:      darwin
+[debug] [2021-06-24T13:23:17.825Z] Node Version:  v14.17.0
+[debug] [2021-06-24T13:23:17.826Z] Time:          Thu Jun 24 2021 22:23:17 GMT+0900 (日本標準時)
+[debug] [2021-06-24T13:23:17.826Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-06-24T13:23:17.829Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-06-24T13:23:17.829Z] > authorizing via signed-in user (y.kumamoto2021@gmail.com)
+[debug] [2021-06-24T13:23:17.829Z] [iam] checking project kumamoto-portfolio for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]
+[debug] [2021-06-24T13:23:17.830Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/kumamoto-portfolio:testIamPermissions  
+ {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]}
+[debug] [2021-06-24T13:23:18.508Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 24 Jun 2021 13:23:18 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=583","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-06-24T13:23:18.511Z] >>> HTTP REQUEST POST https://iam.googleapis.com/v1/projects/kumamoto-portfolio/serviceAccounts/kumamoto-portfolio@appspot.gserviceaccount.com:testIamPermissions  
+ {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2021-06-24T13:23:19.231Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 24 Jun 2021 13:23:19 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-06-24T13:23:19.232Z] > refreshing access token with scopes: []
+[debug] [2021-06-24T13:23:19.232Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-06-24T13:23:19.389Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","date":"Thu, 24 Jun 2021 13:23:19 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-06-24T13:23:19.431Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/kumamoto-portfolio [none]
+[debug] [2021-06-24T13:23:19.832Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/kumamoto-portfolio 200
+[debug] [2021-06-24T13:23:19.833Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/kumamoto-portfolio {"projectId":"kumamoto-portfolio","projectNumber":"59398389098","displayName":"yuki-Portfolio","name":"projects/kumamoto-portfolio","resources":{"hostingSite":"kumamoto-portfolio","storageBucket":"kumamoto-portfolio.appspot.com","locationId":"asia-northeast1"},"state":"ACTIVE"}
+[info] 
+[info] === Deploying to 'kumamoto-portfolio'...
+[info] 
+[info] i  deploying storage, firestore, functions, hosting 
+[debug] [2021-06-24T13:23:19.835Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-06-24T13:23:19.835Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-06-24T13:23:20.019Z] <<< HTTP RESPONSE 200 {"date":"Thu, 24 Jun 2021 13:23:20 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-06-24T13:23:20.061Z] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/kumamoto-portfolio  
+ 
+[debug] [2021-06-24T13:23:20.333Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 24 Jun 2021 13:23:20 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  firebase.storage: checking storage.rules for compilation errors... 
+[debug] [2021-06-24T13:23:20.336Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/kumamoto-portfolio:test  
+ {"source":{"files":[{"name":"storage.rules","content":"rules_version = '2';\nservice firebase.storage {\n  match /b/{bucket}/o {\n    match /{allPaths=**} {\n      allow read, write: if request.auth!=null;\n    }\n  }\n}\n"}]}}
+[debug] [2021-06-24T13:23:20.778Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 24 Jun 2021 13:23:20 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] ✔  firebase.storage: rules file storage.rules compiled successfully 
+[info] i  firestore: reading indexes from firestore.indexes.json... 
+[info] i  cloud.firestore: checking firestore.rules for compilation errors... 
+[debug] [2021-06-24T13:23:20.782Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/kumamoto-portfolio:test  
+ {"source":{"files":[{"name":"firestore.rules","content":"rules_version = '2';\nservice cloud.firestore {\n  match /databases/{database}/documents {\n    match /articles/{articleId} {\n      allow read, write: if request.auth != null;\n    }\n  }\n}\n"}]}}
+[debug] [2021-06-24T13:23:21.867Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 24 Jun 2021 13:23:21 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] ✔  cloud.firestore: rules file firestore.rules compiled successfully 
+[debug] [2021-06-24T13:23:21.871Z] Validating nodejs source
+[debug] [2021-06-24T13:23:22.558Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "14"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^9.8.0",
+    "firebase-functions": "^3.14.1"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^3.9.1",
+    "@typescript-eslint/parser": "^3.8.0",
+    "eslint": "^7.6.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.22.0",
+    "firebase-functions-test": "^0.2.0",
+    "typescript": "^3.8.0"
+  },
+  "private": true
+}
+[debug] [2021-06-24T13:23:22.558Z] Building nodejs source
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[debug] [2021-06-24T13:23:22.559Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/kumamoto-portfolio/services/cloudfunctions.googleapis.com  
+ 
+[debug] [2021-06-24T13:23:22.559Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/kumamoto-portfolio/services/runtimeconfig.googleapis.com  
+ 
+[debug] [2021-06-24T13:23:22.559Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/kumamoto-portfolio/services/cloudbuild.googleapis.com  
+ 
+[debug] [2021-06-24T13:23:23.534Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 24 Jun 2021 13:23:23 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-06-24T13:23:23.538Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 24 Jun 2021 13:23:23 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] ✔  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2021-06-24T13:23:23.546Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 24 Jun 2021 13:23:23 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] ✔  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2021-06-24T13:23:23.547Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/kumamoto-portfolio/adminSdkConfig  
+ 
+[debug] [2021-06-24T13:23:24.397Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 24 Jun 2021 13:23:24 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-06-24T13:23:24.399Z] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/kumamoto-portfolio/configs  
+ 
+[debug] [2021-06-24T13:23:24.900Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 24 Jun 2021 13:23:24 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-06-24T13:23:24.902Z] Analyzing nodejs backend spec
+[debug] [2021-06-24T13:23:24.958Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/kumamoto-portfolio/versions  
+ {"config":{"rewrites":[{"glob":"**","path":"/index.html"}],"headers":[{"glob":"*.[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f].+(css|js)","headers":{"Cache-Control":"public,max-age=31536000,immutable"}}]},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2021-06-24T13:23:26.031Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 24 Jun 2021 13:23:25 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-06-24T13:23:26.034Z] >>> HTTP REQUEST GET https://firebaserules.googleapis.com/v1/projects/kumamoto-portfolio/releases?pageSize=10&pageToken=  
+ 
