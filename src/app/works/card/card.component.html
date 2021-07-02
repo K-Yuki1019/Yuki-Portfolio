@@ -1,59 +1,18 @@
-<ng-container>
-  <div class="works">
-    <h1 class="works__title">Works</h1>
-    <div class="grid">
-      <div class="card">
-        <a href="" class="card__item">
-          <img class="card__img" src="/assets/images/route66.jpeg" alt="" />
-          <div class="card__body">
-            <div class="card__info">
-              <h2 class="card__name">Muscle-Memo</h2>
-              <h3 class="card__about">
-                筋トレを毎日記録できるサービスです筋トレを毎日記録できるサービスです筋トレを毎日記録できるサービスです
-              </h3>
-            </div>
-            <div class="card__description">
-              <p class="card__date">2021年 6月 10日 投稿</p>
-            </div>
-          </div>
-        </a>
+<div class="card">
+  <a href="" class="card__item">
+    <img class="card__img" src="https://placehold.jp/270x150.png" alt="" />
+    <div class="card__body">
+      <div class="card__info">
+        <h2 class="card__name">{{ article.title }}</h2>
+        <h3 class="card__about">
+          {{ article.description }}
+        </h3>
       </div>
-
-      <div class="card">
-        <a href="" class="card__item">
-          <img class="card__img" src="/assets/images/route66.jpeg" alt="" />
-          <div class="card__body">
-            <div class="card__info">
-              <h2 class="card__name">Muscle-Memo</h2>
-              <h3 class="card__about">
-                筋トレを毎日記録できるサービスです筋トレを毎日記録できるサービスです筋トレを毎日記録できるサービスです
-              </h3>
-            </div>
-            <div class="card__description">
-              <p class="card__date">2021年 6月 10日 投稿</p>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <div class="card">
-        <a href="" class="card__item">
-          <img class="card__img" src="/assets/images/route66.jpeg" alt="" />
-          <div class="card__body">
-            <div class="card__info">
-              <h2 class="card__name">Muscle-Memo</h2>
-              <h3 class="card__about">
-                筋トレを毎日記録できるサービスです筋トレを毎日記録できるサービスです筋トレを毎日記録できるサービスです
-              </h3>
-            </div>
-            <div class="card__description">
-              <p class="card__date">2021年 6月 10日 投稿</p>
-            </div>
-          </div>
-        </a>
+      <div class="card__description">
+        <p class="card__date">
+          {{ article.createdAt.toDate() | date: "yyyy年MM月dd日" }} 投稿
+        </p>
       </div>
     </div>
-
-    <p class="works__message">To keep added...</p>
-  </div>
-</ng-container>
+  </a>
+</div>
