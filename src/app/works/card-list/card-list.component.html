@@ -1,1 +1,10 @@
-<p>card-list works!</p>
+<ng-container *ngIf="articles$ | async as articles; blank">
+  <div class="grid">
+    <ng-container *ngFor="let article of articles">
+      <app-card *ngIf="article" [article]="article"></app-card>
+    </ng-container>
+  </div>
+</ng-container>
+<ng-template #blank>
+  <p>記事がありません。</p>
+</ng-template>

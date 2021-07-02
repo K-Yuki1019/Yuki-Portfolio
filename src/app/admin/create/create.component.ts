@@ -57,7 +57,7 @@ export class CreateComponent implements OnInit {
         githubURL: value.githubURL,
       })
       .then(() => {
-        this.router.navigateByUrl('/'),
+        this.router.navigateByUrl('/works'),
           this.snackBar.open('記事を投稿しました！', '閉じる');
       });
   }
