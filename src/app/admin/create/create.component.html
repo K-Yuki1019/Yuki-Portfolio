@@ -1,7 +1,4 @@
 <div class="container container--create">
-  <ng-container *ngIf="afUser$ | async as user">
-    <p>{{ user.email }} is login!</p>
-  </ng-container>
   <div class="create">
     <form [formGroup]="form" class="create__form">
       <div class="create__item">
