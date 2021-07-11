@@ -1,5 +1,25 @@
-<div class="container">
-  <a routerLink="create">くりえいと</a>
-  <a routerLink="edit">えでぃっと</a>
-  <app-create></app-create>
+<div class="wrap">
+  <div class="tabs">
+    <nav class="nav" mat-tab-nav-bar mat>
+      <a
+        mat-tab-link
+        routerLinkActive
+        routerLink="create"
+        [routerLinkActiveOptions]="{ exact: true }"
+        #rla="routerLinkActive"
+        [active]="rla.isActive"
+        >新規作成</a
+      >
+      <a
+        mat-tab-link
+        routerLinkActive
+        routerLink="index"
+        [routerLinkActiveOptions]="{ exact: true }"
+        #rla="routerLinkActive"
+        [active]="rla.isActive"
+        >投稿一覧</a
+      >
+    </nav>
+    <router-outlet></router-outlet>
+  </div>
 </div>
