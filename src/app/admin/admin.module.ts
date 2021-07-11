@@ -10,6 +10,7 @@ import { MatInputModule } from '@angular/material/input';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { EditComponent } from './edit/edit.component';
+import { MatTabsModule } from '@angular/material/tabs';
 
 @NgModule({
   declarations: [CreateComponent, AdminComponent, EditComponent],
@@ -22,6 +23,7 @@ import { EditComponent } from './edit/edit.component';
     FormsModule,
     ReactiveFormsModule,
     MatButtonModule,
+    MatTabsModule,
   ],
 })
 export class AdminModule {}
