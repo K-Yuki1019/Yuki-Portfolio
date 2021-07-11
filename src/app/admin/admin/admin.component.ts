@@ -13,11 +13,9 @@ import { switchMap } from 'rxjs/operators';
 })
 export class AdminComponent implements OnInit {
   afUser$ = this.authService.afUser$;
+  defaultActive = 'create';
 
-  constructor(
-    private authService: AuthService,
-    private articleService: ArticleService
-  ) {}
+  constructor(private authService: AuthService) {}
 
   ngOnInit(): void {}
 }
