@@ -81,7 +81,7 @@ export class AuthService {
   }
 
   private succeededLogin() {
-    this.router.navigateByUrl('/admin');
+    this.router.navigateByUrl('/admin/create');
     this.snackBar.open('管理画面にログインしました!', '閉じる');
     this.isProcessing = false;
   }

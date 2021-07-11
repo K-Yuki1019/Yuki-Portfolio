@@ -11,9 +11,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { EditComponent } from './edit/edit.component';
 import { MatTabsModule } from '@angular/material/tabs';
+import { IndexComponent } from './index/index.component';
 
 @NgModule({
-  declarations: [CreateComponent, AdminComponent, EditComponent],
+  declarations: [CreateComponent, AdminComponent, EditComponent, IndexComponent],
   imports: [
     CommonModule,
     AdminRoutingModule,
