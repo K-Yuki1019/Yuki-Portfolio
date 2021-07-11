@@ -12,9 +12,15 @@ import { MatButtonModule } from '@angular/material/button';
 import { EditComponent } from './edit/edit.component';
 import { MatTabsModule } from '@angular/material/tabs';
 import { IndexComponent } from './index/index.component';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
-  declarations: [CreateComponent, AdminComponent, EditComponent, IndexComponent],
+  declarations: [
+    CreateComponent,
+    AdminComponent,
+    EditComponent,
+    IndexComponent,
+  ],
   imports: [
     CommonModule,
     AdminRoutingModule,
@@ -25,6 +31,7 @@ import { IndexComponent } from './index/index.component';
     ReactiveFormsModule,
     MatButtonModule,
     MatTabsModule,
+    MatIconModule,
   ],
 })
 export class AdminModule {}
