@@ -1,7 +1,4 @@
-<div
-  class="container container--create"
-  *ngIf="articles$ | async as articles; notExist"
->
+<div class="container container--create" *ngIf="articles$ | async as articles">
   <div class="card" *ngFor="let article of articles">
     <div class="card__inner">
       <div class="card__info">
@@ -25,12 +22,10 @@
         </div>
       </div>
       <div class="card__menu">
-        <button mat-icon-button><mat-icon>edit</mat-icon></button>
-        <button mat-icon-button><mat-icon>delete</mat-icon></button>
+        <button mat-icon-button (click)="openDeleteDialog(article)">
+          <mat-icon>delete</mat-icon>
+        </button>
       </div>
     </div>
   </div>
-  <ng-template #notExist>
-    <p>ないよ</p>
-  </ng-template>
 </div>
