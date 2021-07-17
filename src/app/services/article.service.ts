@@ -21,15 +21,28 @@ export class ArticleService {
   }
 
   createArticle(
-    article: Omit<Article, 'articleId' | 'createdAt'>
+    article: Omit<Article, 'articleId' | 'createdAt' | 'updatedAt'>
   ): Promise<void> {
     const id = this.db.createId();
     const articleValue: Article = {
       articleId: id,
       createdAt: firebase.firestore.Timestamp.now(),
+      updatedAt: firebase.firestore.Timestamp.now(),
       ...article,
     };
     return this.db.doc(`articles/${id}`).set(articleValue);
+  }
+
+  updateArticle(
+    articleId: string,
+    article: Omit<Article, 'articleId' | 'createdAt' | 'updatedAt'>
+  ): Promise<void> {
+    const targetArticle = {
+      articleId,
+      ...article,
+      updatedAt: firebase.firestore.Timestamp.now(),
+    };
+    return this.db.doc(`articles/${articleId}`).update(targetArticle);
   }
 
   constructor(private db: AngularFirestore) {}
