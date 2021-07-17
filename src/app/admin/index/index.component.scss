@@ -2,27 +2,29 @@
   margin-bottom: 16px;
   background-color: #fff;
   box-shadow: 0 20px 40px -10px rgb(0 0 0 / 6%);
-  border-radius: 8px;
+
   &:hover {
     transition: 0.3s;
-    background-color: #e4e4e4;
+    background-color: #f7f7f7;
   }
   &__inner {
+    display: flex;
     align-items: center;
     border: 1px solid #e4e4e4;
     padding: 16px 24px;
-    display: flex;
+    // display: flex;
+    border-radius: 8px;
   }
   &__info {
     flex: 1;
   }
   &__title {
-    font-size: 16px;
+    font-size: 24px;
     font-weight: 400;
     margin-bottom: 4px;
   }
   &__description {
-    margin-bottom: 16px;
+    // margin-bottom: 16px;
     color: rgba(48, 48, 48, 0.6);
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -33,4 +35,23 @@
     font-size: 14px;
     color: rgba(48, 48, 48, 0.48);
   }
+  &__menu {
+    text-align: right;
+  }
+}
+
+.urls {
+  display: flex;
+  align-items: center;
+  &__github-url {
+    text-decoration: underline;
+  }
+}
+
+.main {
+  padding-left: 8px;
+}
+
+mat-focus-indicator mat-button mat-button-base {
+  padding: 0;
 }
