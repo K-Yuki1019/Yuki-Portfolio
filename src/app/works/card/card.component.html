@@ -7,6 +7,10 @@
         <h3 class="card__about">
           {{ article.description }}
         </h3>
+        <div class="card__url">
+          <mat-icon inline>link</mat-icon>
+          <a class="card__git" href="{{ article.githubURL }}">Githubへ</a>
+        </div>
       </div>
       <div class="card__description">
         <p class="card__date">
