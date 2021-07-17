@@ -1,10 +1,28 @@
-<div class="container container--create">
-  <div class="card">
+<div
+  class="container container--create"
+  *ngIf="articles$ | async as articles; notExist"
+>
+  <div class="card" *ngFor="let article of articles">
     <div class="card__inner">
       <div class="card__info">
-        <div class="card__title">test Title</div>
-        <div class="card__description">テストなサービスです</div>
-        <div class="card__createdAt">2020/01/22</div>
+        <div class="main">
+          <h1 class="card__title">{{ article.title }}</h1>
+          <div class="card__description">{{ article.description }}</div>
+          <div class="card__createdAt">
+            {{ article.createdAt.toDate() | date: "yyyy年MM月dd日 HH:mm" }}
+          </div>
+        </div>
+        <div class="urls">
+          <button mat-icon-button>
+            <mat-icon>link</mat-icon>
+          </button>
+          <a
+            class="urls__github-url"
+            href="{{ article.githubURL }}"
+            target="_blank"
+            >Github</a
+          >
+        </div>
       </div>
       <div class="card__menu">
         <button mat-icon-button><mat-icon>edit</mat-icon></button>
@@ -12,173 +30,7 @@
       </div>
     </div>
   </div>
-  <div class="card">
-    <div class="card__inner">
-      <div class="card__info">
-        <div class="card__title">test Title</div>
-        <div class="card__description">テストなサービスです</div>
-        <div class="card__createdAt">2020/01/22</div>
-      </div>
-      <div class="card__menu">
-        <button mat-icon-button><mat-icon>edit</mat-icon></button>
-        <button mat-icon-button><mat-icon>delete</mat-icon></button>
-      </div>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card__inner">
-      <div class="card__info">
-        <div class="card__title">test Title</div>
-        <div class="card__description">テストなサービスです</div>
-        <div class="card__createdAt">2020/01/22</div>
-      </div>
-      <div class="card__menu">
-        <button mat-icon-button><mat-icon>edit</mat-icon></button>
-        <button mat-icon-button><mat-icon>delete</mat-icon></button>
-      </div>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card__inner">
-      <div class="card__info">
-        <div class="card__title">test Title</div>
-        <div class="card__description">テストなサービスです</div>
-        <div class="card__createdAt">2020/01/22</div>
-      </div>
-      <div class="card__menu">
-        <button mat-icon-button><mat-icon>edit</mat-icon></button>
-        <button mat-icon-button><mat-icon>delete</mat-icon></button>
-      </div>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card__inner">
-      <div class="card__info">
-        <div class="card__title">test Title</div>
-        <div class="card__description">テストなサービスです</div>
-        <div class="card__createdAt">2020/01/22</div>
-      </div>
-      <div class="card__menu">
-        <button mat-icon-button><mat-icon>edit</mat-icon></button>
-        <button mat-icon-button><mat-icon>delete</mat-icon></button>
-      </div>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card__inner">
-      <div class="card__info">
-        <div class="card__title">test Title</div>
-        <div class="card__description">テストなサービスです</div>
-        <div class="card__createdAt">2020/01/22</div>
-      </div>
-      <div class="card__menu">
-        <button mat-icon-button><mat-icon>edit</mat-icon></button>
-        <button mat-icon-button><mat-icon>delete</mat-icon></button>
-      </div>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card__inner">
-      <div class="card__info">
-        <div class="card__title">test Title</div>
-        <div class="card__description">テストなサービスです</div>
-        <div class="card__createdAt">2020/01/22</div>
-      </div>
-      <div class="card__menu">
-        <button mat-icon-button><mat-icon>edit</mat-icon></button>
-        <button mat-icon-button><mat-icon>delete</mat-icon></button>
-      </div>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card__inner">
-      <div class="card__info">
-        <div class="card__title">test Title</div>
-        <div class="card__description">テストなサービスです</div>
-        <div class="card__createdAt">2020/01/22</div>
-      </div>
-      <div class="card__menu">
-        <button mat-icon-button><mat-icon>edit</mat-icon></button>
-        <button mat-icon-button><mat-icon>delete</mat-icon></button>
-      </div>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card__inner">
-      <div class="card__info">
-        <div class="card__title">test Title</div>
-        <div class="card__description">テストなサービスです</div>
-        <div class="card__createdAt">2020/01/22</div>
-      </div>
-      <div class="card__menu">
-        <button mat-icon-button><mat-icon>edit</mat-icon></button>
-        <button mat-icon-button><mat-icon>delete</mat-icon></button>
-      </div>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card__inner">
-      <div class="card__info">
-        <div class="card__title">test Title</div>
-        <div class="card__description">テストなサービスです</div>
-        <div class="card__createdAt">2020/01/22</div>
-      </div>
-      <div class="card__menu">
-        <button mat-icon-button><mat-icon>edit</mat-icon></button>
-        <button mat-icon-button><mat-icon>delete</mat-icon></button>
-      </div>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card__inner">
-      <div class="card__info">
-        <div class="card__title">test Title</div>
-        <div class="card__description">テストなサービスです</div>
-        <div class="card__createdAt">2020/01/22</div>
-      </div>
-      <div class="card__menu">
-        <button mat-icon-button><mat-icon>edit</mat-icon></button>
-        <button mat-icon-button><mat-icon>delete</mat-icon></button>
-      </div>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card__inner">
-      <div class="card__info">
-        <div class="card__title">test Title</div>
-        <div class="card__description">テストなサービスです</div>
-        <div class="card__createdAt">2020/01/22</div>
-      </div>
-      <div class="card__menu">
-        <button mat-icon-button><mat-icon>edit</mat-icon></button>
-        <button mat-icon-button><mat-icon>delete</mat-icon></button>
-      </div>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card__inner">
-      <div class="card__info">
-        <div class="card__title">test Title</div>
-        <div class="card__description">テストなサービスです</div>
-        <div class="card__createdAt">2020/01/22</div>
-      </div>
-      <div class="card__menu">
-        <button mat-icon-button><mat-icon>edit</mat-icon></button>
-        <button mat-icon-button><mat-icon>delete</mat-icon></button>
-      </div>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card__inner">
-      <div class="card__info">
-        <div class="card__title">test Title</div>
-        <div class="card__description">テストなサービスです</div>
-        <div class="card__createdAt">2020/01/22</div>
-      </div>
-      <div class="card__menu">
-        <button mat-icon-button><mat-icon>edit</mat-icon></button>
-        <button mat-icon-button><mat-icon>delete</mat-icon></button>
-      </div>
-    </div>
-  </div>
+  <ng-template #notExist>
+    <p>ないよ</p>
+  </ng-template>
 </div>

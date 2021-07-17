@@ -22,9 +22,9 @@
     border-bottom: 1px dashed #e4e4e4;
   }
   &__name {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 400;
-    margin-bottom: 8px;
+    margin-bottom: 16px;
   }
   &__about {
     font-size: 16px;
@@ -38,6 +38,13 @@
   &__description {
     padding: 8px 16px;
   }
+  &__url {
+    display: flex;
+    align-items: center;
+  }
+  &__git {
+    color: rgba(0, 0, 0, 0.5);
+  }
   &__date {
     font-size: 13px;
     color: rgba(48, 48, 48, 0.48);
@@ -49,4 +56,8 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
   margin-bottom: 24px;
+}
+
+mat-icon {
+  margin-right: 8px;
 }

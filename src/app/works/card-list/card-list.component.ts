@@ -14,8 +14,4 @@ export class CardListComponent implements OnInit {
   constructor(private articleService: ArticleService) {}
 
   ngOnInit(): void {}
-
-  getArticles(): Observable<Article[]> {
-    return this.articleService.getArticles();
-  }
 }
