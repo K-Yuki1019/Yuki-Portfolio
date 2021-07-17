@@ -13,6 +13,7 @@ import { EditComponent } from './edit/edit.component';
 import { MatTabsModule } from '@angular/material/tabs';
 import { IndexComponent } from './index/index.component';
 import { MatIconModule } from '@angular/material/icon';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { MatIconModule } from '@angular/material/icon';
     MatButtonModule,
     MatTabsModule,
     MatIconModule,
+    MatDialogModule,
   ],
 })
 export class AdminModule {}

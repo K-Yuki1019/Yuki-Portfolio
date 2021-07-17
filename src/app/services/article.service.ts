@@ -45,5 +45,9 @@ export class ArticleService {
     return this.db.doc(`articles/${articleId}`).update(targetArticle);
   }
 
+  deleteArticle(article: Article): Promise<void> {
+    return this.db.doc(`articles/${article.articleId}`).delete();
+  }
+
   constructor(private db: AngularFirestore) {}
 }
